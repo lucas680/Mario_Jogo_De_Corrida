@@ -1,0 +1,160 @@
+/* variaveis */
+:root {
+	--altura-jump: 180px;
+}
+
+. {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: black;
+}
+
+.game-board{
+	width: 100%;
+	height: 500px;
+	border-bottom: solid 15px rgb(35, 160, 35);
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.clouds{
+	width: 550px;
+	position: absolute;
+	animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes clouds-animation{
+	from{
+		right: -550px;
+	}
+	to{
+		right: 100%;
+	}
+}
+
+.pipe{
+	position: absolute;
+	bottom: 0;
+	width: 80px;
+	animation: pipe-animation 2s infinite linear;
+}
+
+@keyframes pipe-animation{
+	from{
+		right: -80px;
+	}
+	to{
+		right: 100%;
+	}
+}
+
+.mario{
+	width: 150px;
+	position: absolute;
+	bottom: 0;
+}
+
+.jump{
+	animation: jump 500ms ease-out;
+}
+
+@keyframes jump{
+	0%{
+		bottom: 0;
+	}
+	40%{
+		bottom: var(--altura-jump);
+	}
+	50%{
+		bottom: var(--altura-jump);
+	}
+	60%{
+		bottom: var(--altura-jump);
+	}
+	100%{
+		bottom: 0;
+	}
+
+}
+
+.pontos{
+	margin-left: 95%;
+	margin-top: 20px;
+	width: 30px;
+	height: 20px;
+	background-color: green;
+	color: white;
+	text-align: center;
+	border: 0px;
+	border-radius: 5px;
+	padding: 10px;
+	position: absolute;
+}
+
+.div-pontos{
+	background-color: black;
+	text-align: center;
+	width: 100px;
+	padding: 10px;
+	margin-left: 45%;
+	margin-top: 120px;
+	position: absolute;
+	border-radius: 10px;
+	visibility: hidden;
+}
+
+.div-pontos p{
+  color: white;
+}
+
+.div-pontos input{
+	width: 30px;
+	height: 20px;
+	text-align: center;
+	border: 0px;
+	color: white;
+	background-color: black;
+}
+
+
+
+
+
+.game-over{
+	position: absolute;
+	width: 700px;
+	height: 250px;
+	margin-top: 200px;
+	margin-left: 300px;
+	color: black;
+	font-size: 150px;
+	visibility: hidden;
+
+}
+
+.restart{
+	position: absolute;
+	width: 80px;
+	margin-left: 600px;
+	margin-top: 370px;
+	visibility: hidden;
+}
+
+.restart-a{
+	text-decoration: none;
+}
+
+.fundo{
+	width: 100%;
+	height: 200px;
+}
+
+
+
+
